@@ -1,0 +1,13 @@
+{
+  "name": "maintenance-decision-lab",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "evaluate": "node src/maintenance/evaluate.js",
+    "sensitivity": "node scripts/sensitivity.js",
+    "check": "node --check src/maintenance/data.js && node --check src/maintenance/features.js && node --check src/maintenance/risk.js && node --check src/maintenance/policies.js && node --check src/maintenance/simulator.js && node --check src/maintenance/evaluate.js"
+  },
+  "engines": {"node": ">=20"}
+}

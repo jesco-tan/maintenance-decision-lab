@@ -1,0 +1,8 @@
+{
+  "failureCost": 5,
+  "replacementCost": 1,
+  "unusedLifeCostPerCycle": 0.01,
+  "slotsPerCycle": 1,
+  "riskHorizon": 2,
+  "splitSeed": 23
+}
