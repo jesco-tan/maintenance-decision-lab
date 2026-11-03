@@ -28,7 +28,7 @@ The risk target is whether failure occurs at the end of the current cycle or wit
 
 The toy case verifies simulator mechanics. The [publication report](REPORT.md) gives the local FD001 benchmark replay: with failure cost 5, unused-life charge 0.01, and one slot, total simulated cost across 25 held-out lives was 49.77 for fixed interval, 30.57 for sensor threshold, and 28.15 for calibrated risk. These are counterfactual costs under stated assumptions, not measured aircraft or fleet savings. [REPORT.md](REPORT.md) documents assumptions and interpretation.
 
-Evidence status: source code, saved model metadata, split IDs, per-engine outcomes and action traces are published. Raw FD001 files were supplied locally and are not bundled. The documented archive hash identifies recorded local inputs and extraction integrity, not an independent match to a NASA checksum. A fresh model reproduction requires the same permitted raw inputs and environment; this correction does not claim a new model reproduction.
+Historical evidence status before the 3 November 2026 reproduction: source code, saved model metadata, split IDs, per-engine outcomes and action traces are published. Raw FD001 files were supplied locally and are not bundled. The documented archive hash identifies recorded local inputs and extraction integrity, not an independent match to a NASA checksum. That earlier correction did not include a fresh model reproduction. The documented 3 November 2026 reproduction below supersedes this reproduction status; the baseline FD001 replay, separate operational sensitivity simulator and companion browser toy remain distinct. Costs are dimensionless, not measured fleet savings or aircraft safety validation.
 
 ## NASA data status
 

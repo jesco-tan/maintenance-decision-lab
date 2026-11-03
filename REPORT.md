@@ -88,7 +88,7 @@ The 5,368 snapshots are repeated observations within 25 held-out engines, not 5,
 
 ## Input evidence
 
-Evidence status: source code, saved model metadata, split IDs, per-engine outcomes and action traces are published. Raw FD001 files were supplied locally and are not bundled. The documented archive hash identifies recorded local inputs and extraction integrity, not an independent match to a NASA checksum. A fresh model reproduction requires the same permitted raw inputs and environment; this correction does not claim a new model reproduction.
+Historical evidence status before the 3 November 2026 reproduction: source code, saved model metadata, split IDs, per-engine outcomes and action traces are published. Raw FD001 files were supplied locally and are not bundled. The documented archive hash identifies recorded local inputs and extraction integrity, not an independent match to a NASA checksum. That earlier correction did not include a fresh model reproduction. The documented 3 November 2026 reproduction below supersedes this reproduction status; the baseline FD001 replay, separate operational sensitivity simulator and companion browser toy remain distinct. Costs are dimensionless, not measured fleet savings or aircraft safety validation.
 
 
 ## Independent reproduction and operational sensitivity, 3 November 2026
