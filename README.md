@@ -26,8 +26,18 @@ The risk target is whether failure occurs at the end of the current cycle or wit
 
 ## Current result
 
-The toy case verifies simulator mechanics. The [publication report](REPORT.md) gives the local FD001 benchmark replay: with failure cost 5, unused-life charge 0.01, and one slot, total simulated cost across 25 held-out lives was 49.77 for fixed interval, 30.57 for sensor threshold, and 28.15 for calibrated risk. These are counterfactual costs under stated assumptions, not measured aircraft or fleet savings. [GUIDE.md](GUIDE.md) explains how to write up or adapt the results.
+The toy case verifies simulator mechanics. The [publication report](REPORT.md) gives the local FD001 benchmark replay: with failure cost 5, unused-life charge 0.01, and one slot, total simulated cost across 25 held-out lives was 49.77 for fixed interval, 30.57 for sensor threshold, and 28.15 for calibrated risk. These are counterfactual costs under stated assumptions, not measured aircraft or fleet savings. [REPORT.md](REPORT.md) documents assumptions and interpretation.
+
+Evidence status: source code, saved model metadata, split IDs, per-engine outcomes and action traces are published. Raw FD001 files were supplied locally and are not bundled. The documented archive hash identifies recorded local inputs and extraction integrity, not an independent match to a NASA checksum. A fresh model reproduction requires the same permitted raw inputs and environment; this correction does not claim a new model reproduction.
 
 ## NASA data status
 
 See [data access gate](data/README.md). The user supplied an extracted archive locally and confirmed permission to reuse it for this work. The public resource still lists no general license; raw files remain under ignored `data/raw`. `scripts/download-nasa.js` is an optional retry tool.
+
+## Timing, denominators and uncertainty
+
+Replacement may occur after the current sensor reading and before failure at the end of that cycle, including the true final cycle. There is no intervention lead time or repair-duration model, and unexpected failures do not consume a planned slot. Discarded life uses the known terminal cycle retrospectively for accounting, not as a deployable observation.
+
+Offered slots count only periods with active decision records. The denominator changes with each policy termination time, so utilization percentages are descriptive and are not directly comparable fixed-horizon capacity efficiencies.
+
+The 5,368 snapshots are repeated observations within 25 held-out engines, not 5,368 independent units. Brier is averaged over cycles, giving longer lives more weight. No engine-level confidence interval is reported. Additional split seeds are sensitivity checks on the same pool.

@@ -77,3 +77,15 @@ These are counterfactual outcomes under synthetic FD001 trajectories and chosen 
 ## Reproducibility and source
 
 Run `node --test`, `node src/maintenance/evaluate.js --fd001`, and `node scripts/sensitivity.js` from the project folder. The [comparison table](outputs/comparison-fd001.csv) and [sensitivity summary](outputs/sensitivity-summary.csv) are the machine-readable companions to this writeup. The user-supplied ZIP has SHA-256 `74BEF434A34DB25C7BF72E668EA4CD52AFE5F2CF8E44367C55A82BFD91A5A34F`; `data/README.md` records the local integrity and schema checks. The [NASA resource page](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data/resource/5224bcd1-ad61-490b-93b9-2817288accb8) currently lists no general license.
+
+## Timing, denominators and uncertainty
+
+Replacement may occur after the current sensor reading and before failure at the end of that cycle, including the true final cycle. There is no intervention lead time or repair-duration model, and unexpected failures do not consume a planned slot. Discarded life uses the known terminal cycle retrospectively for accounting, not as a deployable observation.
+
+Offered slots count only periods with active decision records. The denominator changes with each policy termination time, so utilization percentages are descriptive and are not directly comparable fixed-horizon capacity efficiencies.
+
+The 5,368 snapshots are repeated observations within 25 held-out engines, not 5,368 independent units. Brier is averaged over cycles, giving longer lives more weight. No engine-level confidence interval is reported. Additional split seeds are sensitivity checks on the same pool.
+
+## Input evidence
+
+Evidence status: source code, saved model metadata, split IDs, per-engine outcomes and action traces are published. Raw FD001 files were supplied locally and are not bundled. The documented archive hash identifies recorded local inputs and extraction integrity, not an independent match to a NASA checksum. A fresh model reproduction requires the same permitted raw inputs and environment; this correction does not claim a new model reproduction.
