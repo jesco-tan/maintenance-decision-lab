@@ -1,0 +1,11 @@
+{
+  "retrieved": "2026-11-03",
+  "source": "NASA CKAN official metadata resource resolved by scripts/download-nasa.js",
+  "archive_sha256": "74bef434a34db25c7bf72e668ea4cd52afe5f2cf8e44367c55a82bfd91a5a34f",
+  "inputs": {
+    "train_FD001.txt": "963b5e22825b34d8b21c69e1aeb4af3e647050eb672ee8834ba4b5d91d2de0f8",
+    "test_FD001.txt": "3cda7109ce17bafb5443f2ac926cfcf88154b941b8c4cf95eb55d1ddd6f52851",
+    "RUL_FD001.txt": "a19c8ec94931949d0485bdc35118206e9c81c4547b422efb9cf86f4ceddbceca"
+  },
+  "permission": "Owner previously confirmed permission to use locally; raw data remain ignored."
+}

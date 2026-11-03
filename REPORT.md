@@ -89,3 +89,18 @@ The 5,368 snapshots are repeated observations within 25 held-out engines, not 5,
 ## Input evidence
 
 Evidence status: source code, saved model metadata, split IDs, per-engine outcomes and action traces are published. Raw FD001 files were supplied locally and are not bundled. The documented archive hash identifies recorded local inputs and extraction integrity, not an independent match to a NASA checksum. A fresh model reproduction requires the same permitted raw inputs and environment; this correction does not claim a new model reproduction.
+
+
+## Independent reproduction and operational sensitivity, 3 November 2026
+
+Reacquired the official NASA archive via the documented CKAN resource and extracted only FD001 locally. `outputs/retrieval-manifest.json` records original archive and input hashes. Refit training standardisation and logistic model, recalibrated on separate validation engines, retuned policies, then replayed held-out engines. All four default costs match the previously published run within 1e-8: fixed 49.77, sensor 30.57, risk 28.15 and unattainable oracle 25.01. The raw files remain ignored.
+
+A paired engine-outcome bootstrap uses 10,000 draws, seed 20261103. Risk-minus-sensor mean cost difference is -0.0968 per engine, with descriptive percentile interval [-0.1300, -0.0640]. This resamples 25 engine outcomes rather than cycle snapshots. It conditions on the fitted policies and realised capacity allocation; it does not rerun shared-capacity interactions and therefore has no coverage guarantee for a new fleet. It excludes model-refitting uncertainty. Separate seeds 17 and 47 refit, recalibrate and retune on different engine partitions; those are split sensitivities, not confidence intervals or independent new datasets.
+
+`src/maintenance/operational.js` adds a separate operational simulator with persistent requests, frozen request priority, intervention lead time, multi-period bay occupancy, staggered arrivals and optional shared capacity for failure repairs. Failures enter the service queue in the following period. For each scenario all policies use the same natural-life calendar horizon, including idle periods. Repairs beyond that horizon are censored. Jobs already in progress hold their bay; queued failure work has priority over planned jobs at allocation. The model does not invent a second engine life or account for post-intervention production.
+
+Twenty-four scenarios cross lead times 0/3/7 periods, durations 1/3, stagger 0/60 and shared failure capacity off/on, using the frozen default policies. The risk policy remains lowest cost in this bounded grid. This does not guarantee preference under all assumptions. Policy thresholds are not retuned to each operational scenario. `outputs/operational-validation.json` includes cost, failures, common-horizon offered slots, occupied slot-periods, unfinished failure repairs and per-engine outcomes.
+
+Reproduce with `node scripts/download-nasa.js`, extract FD001 as documented, `node src/maintenance/evaluate.js --fd001`, `node src/maintenance/evaluate.js --fd001 --seed=17 --compact` (repeat for seed 47), then `node scripts/validate-operations.js`. Run `node --test` for simulator checks. Node version, source hashes and output hash are in `outputs/operational-manifest.json`. No build is needed.
+
+The browser's constructed replay remains the original immediate-action teaching scenario. It does not display the extended operational scenarios or bundle NASA data. No real fleet savings or safety gains are measured.

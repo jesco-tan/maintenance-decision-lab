@@ -1,7 +1,9 @@
-# Verification, 3 November 2026
+# Validation
 
-All 10 Node tests passed. Changes are documentation corrections for timing, input provenance, correlated snapshots and policy-dependent utilization denominators. No FD001 evaluator, model fitting, sensitivity run or raw-data download was performed. Existing numerical manifests remain unchanged.
+I reacquired the official FD001 inputs and reran fitting, calibration, policy tuning and held-out replay. The default costs reproduced the saved results. All 14 Node tests passed.
 
-## Interpretation limits
+I also refitted using split seeds 17 and 47 and evaluated 24 operational scenarios covering intervention lead time, repair duration, staggered arrivals and shared failure-repair capacity. The operational results use a common calendar denominator within each scenario.
 
-NASA simulated degradation, counterfactual policy replay and deliberately constructed toy examples are separate evidence categories. No measured fleet saving, actual intervention effect or deployment readiness is established.
+## Scope
+
+The engine-outcome bootstrap conditions on the fitted policies and realised replay outcomes. It does not rerun capacity-coupled fleet interactions or provide a coverage guarantee for a new fleet. Alternative split refits are separate sensitivity checks. The browser toy, FD001 evaluation and operational scenarios remain distinct; no measured fleet saving or safety gain is established. See [REPORT.md](REPORT.md), `outputs/operational-validation.json` and `outputs/operational-manifest.json` for details and reproduction.

@@ -41,3 +41,7 @@ Replacement may occur after the current sensor reading and before failure at the
 Offered slots count only periods with active decision records. The denominator changes with each policy termination time, so utilization percentages are descriptive and are not directly comparable fixed-horizon capacity efficiencies.
 
 The 5,368 snapshots are repeated observations within 25 held-out engines, not 5,368 independent units. Brier is averaged over cycles, giving longer lives more weight. No engine-level confidence interval is reported. Additional split seeds are sensitivity checks on the same pool.
+
+## Fresh reproduction
+
+The 3 November rerun reacquired official FD001 and reproduced the default costs exactly. See the new REPORT.md section for engine-level uncertainty limitations, split refits and operational sensitivity. Extended scenarios use a separate simulator; browser toy mechanics remain separate.

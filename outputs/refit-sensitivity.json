@@ -1,0 +1,113 @@
+{
+  "scope": "Refit, recalibration and retuning on alternative partitions of the same finite engine pool, not independent-sample uncertainty.",
+  "results": [
+    {
+      "seed": 23,
+      "test_engine_ids": [
+        91,
+        70,
+        64,
+        39,
+        34,
+        4,
+        90,
+        55,
+        85,
+        92,
+        23,
+        68,
+        8,
+        44,
+        21,
+        83,
+        20,
+        67,
+        100,
+        78,
+        69,
+        51,
+        56,
+        37,
+        25
+      ],
+      "costs": {
+        "fixed": 49.769999999999996,
+        "sensor": 30.57,
+        "risk": 28.15,
+        "oracle": 25.01
+      }
+    },
+    {
+      "seed": 17,
+      "test_engine_ids": [
+        1,
+        36,
+        62,
+        9,
+        22,
+        59,
+        85,
+        48,
+        27,
+        38,
+        77,
+        6,
+        93,
+        34,
+        98,
+        51,
+        15,
+        20,
+        64,
+        32,
+        69,
+        29,
+        46,
+        82,
+        25
+      ],
+      "costs": {
+        "fixed": 43.34,
+        "sensor": 30.33,
+        "risk": 28.58,
+        "oracle": 25.06
+      }
+    },
+    {
+      "seed": 47,
+      "test_engine_ids": [
+        41,
+        48,
+        71,
+        79,
+        98,
+        27,
+        35,
+        3,
+        77,
+        36,
+        64,
+        99,
+        47,
+        83,
+        11,
+        100,
+        39,
+        66,
+        57,
+        73,
+        68,
+        40,
+        1,
+        54,
+        26
+      ],
+      "costs": {
+        "fixed": 53.43,
+        "sensor": 29.1,
+        "risk": 27.38,
+        "oracle": 25.04
+      }
+    }
+  ]
+}

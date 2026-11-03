@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "node": "v26.12.1",
+  "inputs": {
+    "src/maintenance/data.js": "1e308b870e1b42e1546e84afc513acf92a3ad5c2f982b7fe0810abd90f58d449",
+    "src/maintenance/evaluate.js": "288d3c1a89d9476af76af6ed9ad1931cc0afdbd03f971ddac4ecc1f47ade4fce",
+    "src/maintenance/features.js": "e2d4dee2572b040cc1fdb2d61b14f196a4bdda48a6ee3eebe0dd8492ae251994",
+    "src/maintenance/operational.js": "6095717f7b9714cdcbf1ac4c50b470a5e1c7043261e150c0388ec98251feded7",
+    "src/maintenance/policies.js": "fd7d144ebed4714f807516fc40cf98cb0a5d812632bdc5a3c1a608717ae608e1",
+    "src/maintenance/risk.js": "634794b791a8191b77cb3001d2c9782ff27b9efcd8e4a60463e23fd41c9c3f21",
+    "src/maintenance/simulator.js": "94e64267ed1a4effc58f5a192009ec2ddc064f9d89586674ad8d61bfcb8514ec",
+    "scripts/validate-operations.js": "17b9e50ff5f8efb580a29e144625ca97613b61f2829e95233bc577699df33099",
+    "outputs/report-fd001.json": "dce22346606f505e91ee984de8ca47eb10860d07851cc7f589e1488ce469c4a3",
+    "outputs/report-fd001-seed17.json": "bc64e2c30b3f388f955261f666987c9da0ddf2f660f8062ad7dd4f5c73964777",
+    "outputs/report-fd001-seed47.json": "ac05db334d14c12d6e0c14242ed0009761691c53f0727053c79f628aae13977c"
+  },
+  "retrievalManifestSha256": "22fce20f535de46ce5e3f2275c9cce1819b829985230730cc9978ad9b42c61d4",
+  "outputSha256": "76057c28adba502bf75fa4c8c50e977e77ffa70e5ef6a20f26cdd370cc008978",
+  "parameters": {
+    "bootstrapSeed": 20261103,
+    "draws": 10000,
+    "splitSeed": 23
+  },
+  "tolerance": "Original costs absolute 1e-8; deterministic replay outputs exact on recorded Node version."
+}
